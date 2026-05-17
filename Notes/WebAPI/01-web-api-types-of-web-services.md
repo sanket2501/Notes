@@ -1,6 +1,18 @@
+---
+title: Web API — Types of Web Services
+source_filename: 1. Web API, Type of WebServices.md
+created: 2026-05-17
+tags:
+  - notes
+  - converted
+  - dotnet
+languages:
+  - csharp
+---
+
 # Web API — Types of Web Services
 
-Modern business applications are built using various programming platforms, making it challenging for them to communicate with each other. Web services solve this problem by providing a common platform that allows different applications to interact, regardless of the programming languages they use.
+Modern business applications are built using various programming platforms, making it challenging for them to communicate with each other. **Web services solve this problem** by providing a common platform that allows different applications to interact, regardless of the programming languages they use.
 
 ## Types of web services
 
@@ -18,14 +30,14 @@ Modern business applications are built using various programming platforms, maki
 
 ### GraphQL
 
-1. A query language for APIs and runtime for executing queries with your data.
-2. Unlike REST, GraphQL allows clients to request only the data they need, making it efficient and flexible for complex queries.
+1. A **query language** for APIs and a runtime for executing requests against your data.
+2. Unlike REST, GraphQL lets clients request *only the fields they need*, making queries efficient and flexible for complex data shapes.
 
 ### gRPC (gRPC Remote Procedure Call)
 
-1. A modern open-source remote procedure call (RPC) framework developed by Google.
-2. It uses Protocol Buffers (a binary serialization format) for efficient communication.
-3. It’s fast and supports features like bidirectional streaming, making it suitable for high-performance applications.
+1. A modern open-source **RPC framework** developed by Google.
+2. Uses **Protocol Buffers** (binary serialization) for compact, fast messages.
+3. Offers features like **bidirectional streaming**, making it suitable for high-performance scenarios.
 
 ## ASP.NET Core Web API
 
@@ -52,7 +64,7 @@ Modern business applications are built using various programming platforms, maki
 
 ### Swagger/OpenAPI Integration
 
-1. With the help of libraries like Swashbuckle, ASP.NET Core Web API can automatically generate Swagger UI documentation for your API, making it easier to test and explore endpoints.
+1. With libraries like **Swashbuckle**, ASP.NET Core can automatically generate a **Swagger UI** and OpenAPI document, making it easier to test and explore endpoints.
 
 ### Authentication & Authorization
 
