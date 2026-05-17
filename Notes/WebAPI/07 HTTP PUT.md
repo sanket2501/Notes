@@ -1,16 +1,4 @@
----
-title: HTTP PUT
-source_filename: 7. HTTP PUT.md
-created: 2026-05-17
-tags:
-  - notes
-  - converted
-  - dotnet
-languages:
-  - csharp
----
-
-# HTTP PUT
+# 07. HTTP PUT
 
 - The **PUT** method in RESTful APIs is used to update an existing resource or create it if it does not exist.
 - When sending a PUT request, the expectation is that the resource will be replaced with the data provided in the request body.

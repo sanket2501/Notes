@@ -1,16 +1,4 @@
----
-title: Controller
-source_filename: 4. Controller.md
-created: 2026-05-17
-tags:
-  - notes
-  - converted
-  - dotnet
-languages:
-  - csharp
----
-
-# Controller
+# 04. Controller
 
 - A Controller is a class placed under the `Controllers` folder. It handles incoming HTTP requests and returns responses to the caller.
 - Methods in a Controller are called **Actions**. Actions can return several types:

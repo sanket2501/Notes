@@ -1,16 +1,4 @@
----
-title: Project file (.csproj)
-source_filename: 3. Project file.md
-created: 2026-05-17
-tags:
-  - notes
-  - converted
-  - dotnet
-languages:
-  - csharp
----
-
-# Project file (.csproj)
+# 03. Project File
 
 ## Key elements
 
@@ -45,8 +33,3 @@ languages:
 3. Upgrade the SDK: install or use the appropriate .NET SDK (e.g., .NET 6) on your development machine and CI.
 
 ---
-
-If you want, I can also:
-
-- Add a sample `MyWebApi.csproj` file to the repository.
-- Create a short checklist for upgrading multiple projects in a solution.

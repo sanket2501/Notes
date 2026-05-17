@@ -1,16 +1,4 @@
----
-title: Web API Project Structure
-source_filename: 2. Web API Project Structure.md
-created: 2026-05-17
-tags:
-  - notes
-  - converted
-  - dotnet
-languages:
-  - csharp
----
-
-# Web API Project Structure
+# 02. Web API Project Structure
 
 ```
 MyWebApi/

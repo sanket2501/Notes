@@ -1,16 +1,4 @@
----
-title: Web API — Types of Web Services
-source_filename: 1. Web API, Type of WebServices.md
-created: 2026-05-17
-tags:
-  - notes
-  - converted
-  - dotnet
-languages:
-  - csharp
----
-
-# Web API — Types of Web Services
+# 01. Web API
 
 Modern business applications are built using various programming platforms, making it challenging for them to communicate with each other. **Web services solve this problem** by providing a common platform that allows different applications to interact, regardless of the programming languages they use.
 

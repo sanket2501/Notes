@@ -1,16 +1,4 @@
----
-title: Routing
-source_filename: 11. Routing.md
-created: 2026-05-17
-tags:
-  - notes
-  - converted
-  - dotnet
-languages:
-  - csharp
----
-
-# Routing
+# 11. Routing
 
 - Conventional routing (also known as standard routing) is the default approach to route HTTP requests to controllers and actions.
 

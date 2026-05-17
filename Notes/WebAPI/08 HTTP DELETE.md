@@ -1,16 +1,4 @@
----
-title: HTTP DELETE
-source_filename: 8. HTTP DELETE.md
-created: 2026-05-17
-tags:
-  - notes
-  - converted
-  - dotnet
-languages:
-  - csharp
----
-
-# HTTP DELETE
+# 08. HTTP DELETE
 
 - The **DELETE** operation in ASP.NET Core Web API is used to remove a resource from the server.
 

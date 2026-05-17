@@ -1,16 +1,4 @@
----
-title: Validation Rules
-source_filename: 9. Validation Rules.md
-created: 2026-05-17
-tags:
-  - notes
-  - converted
-  - dotnet
-languages:
-  - csharp
----
-
-# Validation Rules
+# 09. Validation Rules
 
 - Data annotations allow you to specify validation rules directly on your model properties (like `Required`, `StringLength`, `Range`, etc.).
 

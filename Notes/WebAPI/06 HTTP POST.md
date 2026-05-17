@@ -1,16 +1,4 @@
----
-title: HTTP POST
-source_filename: 6. HTTP POST.md
-created: 2026-05-17
-tags:
-  - notes
-  - converted
-  - dotnet
-languages:
-  - csharp
----
-
-# HTTP POST
+# 06. HTTP POST
 
 - The **HTTP POST** method is typically used to create new resources or perform operations that change server state (e.g., adding a record to a database, submitting a form).
 

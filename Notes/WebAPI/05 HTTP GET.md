@@ -1,16 +1,4 @@
----
-title: HTTP GET
-source_filename: 5. HTTP GET.md
-created: 2026-05-17
-tags:
-  - notes
-  - converted
-  - dotnet
-languages:
-  - csharp
----
-
-# HTTP GET
+# 05. HTTP GET
 
 - The **HTTP GET** method is used to fetch data from the server — e.g., retrieving a list of resources or a specific resource.
 - In an API controller, an action annotated with **`[HttpGet]`** handles GET requests.

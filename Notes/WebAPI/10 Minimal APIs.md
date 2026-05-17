@@ -1,23 +1,11 @@
----
-title: Minimal APIs
-source_filename: 10. Minimal APIs.md
-created: 2026-05-17
-tags:
-  - notes
-  - converted
-  - dotnet
-languages:
-  - csharp
----
+# 10. Minimal APIs
 
-# Minimal APIs
-
-- In .NET 6, a new feature called **Minimal APIs** was introduced. This allows creating APIs with minimal code.
-- Minimal APIs are suited for microservices and apps that want to include the fewest files, features, and dependencies.
+- In .NET 6, a new feature of **Minimal APIs** has been introduced. This allows us to create an API with minimum code.
+- Minimal APIs are microservices and apps that want to include minimum files, features, and dependencies.
 - Minimal APIs are architected to create HTTP APIs with minimal dependencies.
-- When creating a minimal API, uncheck the `Use controllers` option during project setup.
-- After the project is created, the `Controllers` folder will typically not exist.
-- Actions that would normally go in controllers are coded directly in `Program.cs`.
+- You can create a minimal API following the same steps as you created for controller API in the previous demos, the only difference is that during the creation the option `Use controllers` is to be unchecked as shown in the below diagram.
+- Once a minimal API project is created, you will see that the `Controllers` folder will not be existing.
+- All the actions which were mentioned in the controller are now to be coded at `Program.cs`.
 
 ```csharp
 public class Product
