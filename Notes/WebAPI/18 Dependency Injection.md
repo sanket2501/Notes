@@ -182,3 +182,251 @@ public class MyClass
     }
 }
 ```
+
+# Dependency Injection (DI) Lifetimes in ASP.NET Core
+
+## Program.cs Real-World Example
+
+```csharp
+var builder = WebApplication.CreateBuilder(args);
+
+
+
+// ==========================================================
+// DATABASE
+// ==========================================================
+
+// One DbContext per HTTP request
+// Used for database operations
+
+builder.Services.AddScoped<AppDbContext>();
+
+
+
+// ==========================================================
+// REPOSITORY LAYER
+// ==========================================================
+
+// Repository uses DbContext
+// Same repository instance reused inside same request
+
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+
+
+
+// ==========================================================
+// BUSINESS/SERVICE LAYER
+// ==========================================================
+
+// Business services usually Scoped
+// Because they use repositories/DbContext
+
+builder.Services.AddScoped<IProductService, ProductService>();
+
+builder.Services.AddScoped<IOrderService, OrderService>();
+
+builder.Services.AddScoped<IAuthService, AuthService>();
+
+
+
+// ==========================================================
+// TRANSIENT SERVICES
+// ==========================================================
+
+// Lightweight helper services
+// New object every time
+
+builder.Services.AddTransient<IEmailFormatter, EmailFormatter>();
+
+builder.Services.AddTransient<IPdfGenerator, PdfGenerator>();
+
+builder.Services.AddTransient<IPriceCalculator, PriceCalculator>();
+
+
+
+// ==========================================================
+// SINGLETON SERVICES
+// ==========================================================
+
+// Shared globally across application
+
+builder.Services.AddSingleton<ICacheService, CacheService>();
+
+builder.Services.AddSingleton<IJwtTokenService, JwtTokenService>();
+
+builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
+
+
+
+// ==========================================================
+// LOGGING
+// ==========================================================
+
+// Logger is internally Singleton
+
+builder.Services.AddLogging();
+
+
+
+// ==========================================================
+// HTTP CLIENT
+// ==========================================================
+
+// Used for external API calls
+
+builder.Services.AddHttpClient<IPaymentGatewayService,
+    PaymentGatewayService>();
+
+
+
+// ==========================================================
+// MEMORY CACHE
+// ==========================================================
+
+// Shared cache for entire application
+
+builder.Services.AddMemoryCache();
+
+
+
+// ==========================================================
+// SESSION
+// ==========================================================
+
+builder.Services.AddSession();
+
+
+
+// ==========================================================
+// CONTROLLERS
+// ==========================================================
+
+builder.Services.AddControllers();
+```
+
+---
+
+# DI Lifetime Explanation
+
+| Lifetime | Meaning | Real Usage |
+|---|---|---|
+| AddTransient | New object every time | Helpers, formatters |
+| AddScoped | One object per request | DbContext, repositories |
+| AddSingleton | One object for app lifetime | Cache, config |
+
+---
+
+# Real-World Examples
+
+| Service | Lifetime | Reason |
+|---|---|---|
+| AppDbContext | Scoped | Database request handling |
+| ProductRepository | Scoped | Uses DbContext |
+| ProductService | Scoped | Business logic |
+| EmailFormatter | Transient | Lightweight helper |
+| PdfGenerator | Transient | Temporary utility |
+| CacheService | Singleton | Shared cache |
+| JwtTokenService | Singleton | Shared token generation |
+| IConfiguration | Singleton | Application settings |
+
+---
+
+# Request Flow Example
+
+```text
+HTTP Request
+    ↓
+Controller
+    ↓
+ProductService (Scoped)
+    ↓
+ProductRepository (Scoped)
+    ↓
+AppDbContext (Scoped)
+```
+
+All share same request scope.
+
+---
+
+# Transient Example
+
+```text
+ProductService
+    ↓
+EmailFormatter
+
+Every injection creates NEW object
+```
+
+---
+
+# Singleton Example
+
+```text
+Entire Application
+    ↓
+One CacheService Instance
+    ↓
+Shared by All Users
+```
+
+---
+
+# Common Interview Question
+
+## Why DbContext Should Be Scoped?
+
+Because:
+
+- DbContext tracks entity changes
+- Maintains transaction consistency
+- Prevents threading issues
+- Avoids memory leaks
+
+---
+
+# Wrong Example
+
+```csharp
+builder.Services.AddSingleton<AppDbContext>();
+```
+
+❌ Dangerous
+
+---
+
+# Correct Example
+
+```csharp
+builder.Services.AddScoped<AppDbContext>();
+```
+
+✅ Recommended
+
+---
+
+# Quick Cheat Sheet
+
+| Component | Recommended Lifetime |
+|---|---|
+| DbContext | Scoped |
+| Repository | Scoped |
+| Business Service | Scoped |
+| Helper Class | Transient |
+| Utility Service | Transient |
+| Cache Service | Singleton |
+| Configuration | Singleton |
+| Logger | Singleton |
+
+---
+
+# Easy Memory Trick
+
+| Lifetime | Remember As |
+|---|---|
+| Transient | New every time |
+| Scoped | One per request |
+| Singleton | One for entire app |
