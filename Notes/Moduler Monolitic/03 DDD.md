@@ -234,7 +234,7 @@ Identity does not matter.
 # Entity vs Value Object
 
 | Feature | Entity | Value Object |
-|---|---|
+|---|---|---|
 | Identity | Yes | No |
 | Mutable | Usually | Immutable |
 | Equality | By ID | By Values |
