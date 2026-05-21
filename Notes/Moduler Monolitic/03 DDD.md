@@ -75,6 +75,184 @@ DDD adds complexity.
 
 ---
 
+# Types of Domain-Driven Design (DDD)
+
+DDD is mainly divided into two types:
+
+1. Strategic DDD
+2. Tactical DDD
+
+---
+
+# 1. Strategic DDD
+
+# What is Strategic DDD?
+
+Strategic DDD focuses on:
+
+- High-level architecture
+- System boundaries
+- Communication between domains
+- Large enterprise system design
+
+It defines:
+
+```text
+HOW different business domains are separated and connected
+```
+
+---
+
+# Main Concepts of Strategic DDD
+
+| Concept | Purpose |
+|---|---|
+| Bounded Context | Domain boundary |
+| Context Mapping | Communication between contexts |
+| Ubiquitous Language | Shared business language |
+| Subdomain | Smaller business domain |
+
+---
+
+# Example
+
+```text
+E-Commerce System
+    ├── Inventory Context
+    ├── Payment Context
+    ├── Shipping Context
+    └── Customer Context
+```
+
+---
+
+# Strategic DDD Focus
+
+✅ Architecture  
+✅ Business boundaries  
+✅ Multiple systems/modules  
+✅ Team separation  
+✅ Microservices design
+
+---
+
+# 2. Tactical DDD
+
+# What is Tactical DDD?
+
+Tactical DDD focuses on:
+
+- Code-level implementation
+- Domain modeling
+- Business logic design
+
+It defines:
+
+```text
+HOW business logic is implemented in code
+```
+
+---
+
+# Main Concepts of Tactical DDD
+
+| Concept | Purpose |
+|---|---|
+| Entity | Object with identity |
+| Value Object | Object without identity |
+| Aggregate | Group of related objects |
+| Aggregate Root | Main aggregate controller |
+| Repository | Data access abstraction |
+| Domain Service | Business logic |
+| Domain Event | Business event |
+| Factory | Complex object creation |
+
+---
+
+# Example
+
+```csharp
+public class Customer
+{
+    public Guid Id { get; private set; }
+
+    public string Name { get; private set; }
+}
+```
+
+---
+
+# Tactical DDD Focus
+
+✅ Business logic  
+✅ Clean code  
+✅ Domain modeling  
+✅ Maintainability  
+✅ Object relationships
+
+---
+
+# Strategic DDD vs Tactical DDD
+
+| Strategic DDD | Tactical DDD |
+|---|---|
+| High-level design | Code-level design |
+| Architecture-focused | Implementation-focused |
+| System boundaries | Domain objects |
+| Large systems | Internal logic |
+| Bounded Contexts | Entities & Value Objects |
+
+---
+
+# Simple Understanding
+
+| Type | Focus |
+|---|---|
+| Strategic DDD | System Design |
+| Tactical DDD | Code Design |
+
+---
+
+# Real-World Example
+
+# Strategic DDD
+
+```text
+Payment Service
+Inventory Service
+Shipping Service
+```
+
+Defines system boundaries.
+
+---
+
+# Tactical DDD
+
+Inside Payment Service:
+
+```text
+Payment Entity
+Money Value Object
+Payment Repository
+```
+
+Defines internal business logic.
+
+---
+
+# Easy Memory Trick
+
+```text
+Strategic DDD
+    ↓
+Architecture Design
+
+Tactical DDD
+    ↓
+Code Design
+```
+
 # Core Concepts of DDD
 
 | Concept | Purpose |
