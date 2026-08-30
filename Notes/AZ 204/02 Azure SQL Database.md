@@ -4,6 +4,9 @@ Tags: azure, cloud, database
 
 Azure SQL Database is a fully managed relational database service in the cloud. It eliminates the need to manage database servers, operating systems, and underlying infrastructure, allowing developers to focus on application development.
 
+![Azure SQL Database Architecture](images/page_014_img_1.png)
+*Figure: SQL Database components and high availability setup*
+
 ## Table of Contents
 
 - [What is Azure SQL Database](#what-is-azure-sql-database)

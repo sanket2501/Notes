@@ -4,6 +4,12 @@ Tags: azure, cloud, certification
 
 Azure Virtual Machines (VMs) are the foundational IaaS offering in Azure. They provide complete control over compute resources, operating systems, and installed software, making them ideal for lift-and-shift migrations and workloads requiring custom configuration.
 
+![Azure VM Architecture Diagram](images/page_003_img_1.png)
+*Figure: VM components and architecture*
+
+![Azure VM Networking Setup](images/page_007_img_1.png)
+*Figure: VM networking, subnets, and NSG configuration*
+
 ## Table of Contents
 
 - [Virtualization concepts](#virtualization-concepts)

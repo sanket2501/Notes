@@ -4,6 +4,9 @@ Tags: azure, cloud
 
 Cloud computing fundamentals define how modern organizations approach infrastructure, scalability, and cost management. Understanding core concepts like scalability, elasticity, and agility is essential for leveraging Azure effectively.
 
+![Cloud Concepts Overview](images/page_001_img_1.png)
+*Figure: Cloud computing model and key concepts*
+
 ## Table of Contents
 
 - [Scalability](#scalability)

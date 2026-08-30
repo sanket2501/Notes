@@ -4,6 +4,9 @@ Tags: azure, cloud, database
 
 Azure SQL Elastic Pools allow multiple databases to share resources (compute, storage, memory) dynamically. This is ideal for SaaS applications, multi-tenant systems, and scenarios where databases have varying resource demands.
 
+![Elastic Pool Architecture](images/page_016_img_1.png)
+*Figure: Multiple databases sharing resources in an elastic pool*
+
 ## Table of Contents
 
 - [What is an Elastic Pool](#what-is-an-elastic-pool)

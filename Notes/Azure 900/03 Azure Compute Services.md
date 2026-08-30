@@ -4,6 +4,9 @@ Tags: azure, cloud
 
 Azure provides multiple compute options for different application patterns. Choosing the right service depends on your need for control, scalability, cost, and management overhead.
 
+![Azure Compute Services Overview](images/page_005_img_1.png)
+*Figure: IaaS vs PaaS compute options and use cases*
+
 ## Table of Contents
 
 - [IaaS vs. PaaS overview](#iaas-vs-paas-overview)

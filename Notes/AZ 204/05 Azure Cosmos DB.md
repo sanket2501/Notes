@@ -4,6 +4,9 @@ Tags: azure, cloud, database, nosql
 
 Azure Cosmos DB is a globally distributed, multi-model, NoSQL database service. It provides high availability, low latency, and elastic scalability for modern applications that require flexible, schema-free data models.
 
+![Cosmos DB Global Distribution Architecture](images/page_029_img_1.png)
+*Figure: Multi-region replication and global distribution model*
+
 ## Table of Contents
 
 - [What is Cosmos DB](#what-is-cosmos-db)

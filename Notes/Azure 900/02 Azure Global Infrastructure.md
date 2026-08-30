@@ -4,6 +4,9 @@ Tags: azure, cloud
 
 Azure's global infrastructure ensures high availability, disaster recovery, and compliance with data residency requirements. Understanding the hierarchy of physical and logical units is essential for designing resilient applications.
 
+![Azure Global Infrastructure Hierarchy](images/page_004_img_1.png)
+*Figure: Azure regions, availability zones, and data center structure*
+
 ## Table of Contents
 
 - [Azure infrastructure hierarchy](#azure-infrastructure-hierarchy)
